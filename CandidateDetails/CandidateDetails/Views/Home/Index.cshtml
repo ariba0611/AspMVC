@@ -1,0 +1,44 @@
+﻿@model  IEnumerable<CandidateDetails.Models.Candidate>
+@{
+    ViewBag.Title = "Create";
+
+
+
+ 
+       
+            @Html.ActionLink("Enter new data", "Create")
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>ere</th>
+                    <th>hhtyj</th>
+
+
+
+                    @{
+                        foreach (var i in Model)
+                        {
+                        <tr>
+                            <td> @i.CandidateID</td>
+                            <td> @i.CandidateAddress</td>
+                            <td> @i.CandidatePhone</td>
+                            <td>@i.CandidateName</td>
+                            <td>@i.CandidatQualification</td>
+
+
+
+                        </tr>
+                    }
+                    }
+
+                    </tr>
+                </table>
+
+         
+
+            }
+    }
+
+

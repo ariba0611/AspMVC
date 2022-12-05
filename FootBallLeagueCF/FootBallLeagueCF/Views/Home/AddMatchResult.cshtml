@@ -1,0 +1,113 @@
+﻿@model  FootBallLeagueCF.Models.Match
+
+
+
+
+
+<html>
+<head>
+    <title>Result Page</title>
+</head>
+<body style="background-color:burlywood">
+
+<br />
+
+
+    <Center> <h1>FootBall League</h1></Center>
+
+
+
+    <Center> <h2>Add Match Result</h2></Center>
+
+
+
+    <br />
+
+
+
+    @using (Html.BeginForm("AddMatchResult","Home",FormMethod.Post))
+    {
+        <p>
+            <Center>
+                @Html.LabelFor(model => model.MatchID) &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp
+                @Html.TextBoxFor(model => model.MatchID)
+                @Html.ValidationMessageFor(model => model.MatchID)
+
+               
+            </Center>
+        </p>
+        
+
+
+        <p>
+            <Center>
+                @Html.LabelFor(model => model.TeamName1) &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp
+                @Html.TextBoxFor(model => model.TeamName1)
+
+                
+            </Center>
+
+        </p>
+
+
+        
+
+
+        <p>
+            <Center>
+                @Html.LabelFor(model => model.TeamName2) &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp
+                @Html.TextBoxFor(model => model.TeamName2)
+
+
+            </Center>
+
+
+        </p>
+        
+
+
+
+
+
+
+
+        
+        <p>
+            <Center>
+                @Html.LabelFor(model => model.Status)  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp
+                @Html.TextBoxFor(model => model.Status)
+
+
+            </Center>
+
+        </p>
+
+
+
+
+
+
+        <p>
+            <Center>
+                @Html.LabelFor(model => model.WinningTeam) &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp  &nbsp
+                @Html.TextBoxFor(model => model.WinningTeam)
+
+
+            </Center>
+
+        </p>
+
+        
+
+        <br />
+
+        <Center>
+            <input type="submit" value="Save Match Data">
+        </Center>
+        @Html.Raw(ViewData["Inserted"])
+    }
+
+
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+﻿@model  CandidateDetails.Models.Candidate
+@{
+    ViewBag.Title = "Create";
+}
+
+
+<html>
+<body>
+    <h1>Enter details</h1>
+
+    @using (Html.BeginForm())
+    {
+
+        @Html.LabelFor(model => model.CandidateID)
+        @Html.TextBoxFor(model => model.CandidateID)<br />
+
+
+
+        @Html.LabelFor(model => model.CandidateName)
+        @Html.TextBoxFor(model => model.CandidateName)<br />
+
+
+
+        @Html.LabelFor(model => model.CandidateAddress)
+        @Html.TextBoxFor(model => model.CandidateAddress)<br />
+
+
+
+        @Html.LabelFor(model => model.CandidatePhone)
+        @Html.TextBoxFor(model => model.CandidatePhone)<br />
+
+
+
+        @Html.LabelFor(model => model.CandidatQualification)
+        @Html.TextBoxFor(model => model.CandidatQualification)<br />
+
+
+
+        <input type="Submit" name="submit" />
+
+
+
+
+
+    }
+
+
+
+   
+</body>
+</html>
+
+    
+
+
+
+   
